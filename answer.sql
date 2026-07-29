@@ -1,9 +1,7 @@
 -- TYPE YOUR SQL QUERY BELOW
 
--- PART 1: Daily average users before and after the feature change
--- The Kanban Board feature was released on 2018-06-02. This query buckets
--- every login into "before" or "after" that date, then averages the number
--- of distinct daily active users (DAU) within each bucket.
+
+-- PART 1: Create a SQL query that maps out the daily average users before and after the feature change
 
 select
   period,
@@ -36,10 +34,7 @@ group by period;
 -- order by login_date;
 
 
--- PART 2: Number of status changes by card
--- Counts how many rows exist in card_change_history per card (i.e. how many
--- times each card's status was moved), including cards that were never
--- moved (0 changes), ordered from most-moved to least-moved.
+-- PART 2: Create a SQL query that indicates the number of status changes by card
 
 select
   c.id as card_id,
@@ -50,12 +45,10 @@ left join card_change_history h on h.cardID = c.id
 group by c.id, c.name
 order by status_change_count desc;-- TYPE YOUR SQL QUERY BELOW
 
--- PART 1: Create a SQL query that maps out the daily average users before and after the feature change
 
 
 
 
--- PART 2: Create a SQL query that indicates the number of status changes by card
 
 
 
